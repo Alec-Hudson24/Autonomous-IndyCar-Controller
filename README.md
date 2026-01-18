@@ -33,7 +33,7 @@ The goal was to evaluate controller performance on tracking accuracy, stability,
 
 ## Project Links & Resources
 - **Final Systems Presentation** (PDF with methodology, results, conclusions):  
-  [Systems.Final.Presentation.pdf](https://github.com/user-attachments/files/24333923/Systems.Final.Presentation.pdf)
+  [Systems.Final.Presentation.pdf](https://github.com/Alec-Hudson24/Autonomous-IndyCar-Controller/blob/main/Systems.Final.Presentation%20(1).pdf)
 
 ## Visual
 (Include screenshots from your presentation or new ones — upload to repo /images folder)
