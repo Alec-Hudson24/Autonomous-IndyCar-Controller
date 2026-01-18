@@ -38,7 +38,7 @@ The goal was to evaluate controller performance on tracking accuracy, stability,
 ## Visual
 (Include screenshots from your presentation or new ones — upload to repo /images folder)
 
-![Track Simulation Overview]()  
+![Track Simulation Overview](https://github.com/Alec-Hudson24/Autonomous-IndyCar-Controller/blob/main/IndyCar%20Going%20Around%20Track.PNG)  
 *The Car making its way around the track using our controllers
 
 
