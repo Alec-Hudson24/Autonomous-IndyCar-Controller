@@ -1,46 +1,40 @@
-# Autonomous IndyCar Controller
+# Autonomous-IndyCar-Controller
+**Simulation of GPS waypoint-based path following for an IndyCar using classical PID controllers in MATLAB/Simulink**  
+*(Course project: Control systems modeling, PID design, Simulink simulation)*
 
-**Simulation of GPS waypoint-based path following for an IndyCar using classical PID controllers in MATLAB/Simulink**
+## Goal / Overview
+- **Primary Features**:
+  - Waypoint-based reference trajectory from GPS coordinates
+  - Lateral control to minimize cross-track error and heading error
+  - Closed-loop steering commands for autonomous track following
+  - Implemented and compared three controllers:
+    - **Proportional (P)** — basic proportional correction
+    - **Proportional-Integral (PI)** — removes steady-state error (especially useful on curves)
+    - **Proportional-Integral-Derivative (PID)** — adds damping → smoother tracking, less overshoot/oscillation
+- **Motivation**: Demonstrate classical control techniques applied to autonomous vehicle path following; evaluate trade-offs in tracking accuracy, stability, and dynamic response (curves, varying speeds).
+- **Outcome**: Simulated successful lap completion with quantifiable metrics (RMS cross-track error, settling time, overshoot); PID showed best overall balance of performance.
 
-## Goal/Overview
-Designed and implemented lateral controllers for an autonomous IndyCar to follow a predefined track using GPS waypoints. The vehicle autonomously navigates the circuit by minimizing cross-track error and heading deviation.
+## Programs and skills required
+- **Modeling & Simulation**: MATLAB (scripting, plotting, waypoint handling), Simulink (vehicle dynamics block, controller implementation, closed-loop simulation)
+- **Control Theory**: PID control laws, manual tuning (Kp, Ki, Kd), stability analysis, step response interpretation
+- **Toolboxes**: Control System Toolbox, Simulink
+- **Data Analysis**: Calculation of error metrics (RMS cross-track error), visualization of trajectories, performance comparison plots
+- **Other**: Systems thinking, debugging dynamic models, interpreting simulation results
 
-Implemented and compared three controllers:
-- **Proportional (P)** — Basic error correction
-- **Proportional-Integral (PI)** — Eliminates steady-state error
-- **Proportional-Integral-Derivative (PID)** — Adds damping for smoother response and reduced overshoot
+## Key Takeaways and lessons
+- The derivative term is essential for reducing oscillations and improving response on curved sections.
+- Integral action effectively eliminates steady-state offset that pure P or PD controllers leave behind.
+- Simulink is extremely powerful for rapid prototyping and visual debugging of control performance.
+- Classical PID gives strong baseline results for path following; for high-speed racing scenarios, more advanced techniques (MPC, Stanley controller, etc.) would likely outperform it.
+- Sensor noise, actuator delays, and model mismatches would need addressing in real hardware (e.g., via Kalman filtering or robust tuning).
 
-The goal was to evaluate controller performance on tracking accuracy, stability, and response to dynamic track conditions (curves, speed variations).
+## Project Links
+- **Final Systems Presentation** (PDF with methodology, results, plots, conclusions):  
+  [Systems Final Presentation](https://github.com/Alec-Hudson24/Autonomous-IndyCar-Controller/blob/main/Systems.Final.Presentation%20(1).pdf)
 
-## Programs and Skills Required
-- Control theory: PID control laws, tuning (Kp, Ki, Kd), stability analysis
-- MATLAB (scripting, plotting, waypoint generation)
-- Simulink (modeling vehicle dynamics, controller blocks, simulation)
-- MATLAB plugins/toolboxes: Control System Toolbox, Simulink
-- Data analysis: Error metrics (e.g., RMS cross-track error), step response, simulation visualization
+## Model Photo
+![Track Simulation Overview](https://github.com/Alec-Hudson24/Autonomous-IndyCar-Controller/blob/main/IndyCar%20Going%20Around%20Track.PNG)
 
-## Key Features & Implementation
-- Waypoint-based reference path (GPS coordinates converted to trajectory)
-- Vehicle kinematic/dynamic model in Simulink
-- Closed-loop simulation: Controller computes steering/throttle inputs based on current position/error
-- Comparison: Step responses, tracking plots, lap completion time, overshoot/settling time
+*The autonomous IndyCar following the waypoint path using the tuned controllers*
 
-## Key Takeaways & Lessons Learned
-- PID tuning is critical: Derivative term reduces oscillations, Integral eliminates steady-state offset on curves.
-- Simulink excels for rapid prototyping and visualization of control performance.
-- Real-world considerations: Sensor noise, actuator delays, and computational limits would require further robustness (e.g., Kalman filtering).
-- PID provides solid baseline performance for path following; advanced methods (MPC, Stanley) could improve high-speed tracking.
-
-## Project Links & Resources
-- **Final Systems Presentation** (PDF with methodology, results, conclusions):  
-  [Systems.Final.Presentation.pdf](https://github.com/Alec-Hudson24/Autonomous-IndyCar-Controller/blob/main/Systems.Final.Presentation%20(1).pdf)
-
-## Visual
-
-
-![Track Simulation Overview](https://github.com/Alec-Hudson24/Autonomous-IndyCar-Controller/blob/main/IndyCar%20Going%20Around%20Track.PNG)  
-*The Car making its way around the track using our controllers
-
-
-
-This project was part of System Dynamics and Controls, demonstrating application of classical control to autonomous systems.
+*This was for a class called System Dynamics and Controls*
